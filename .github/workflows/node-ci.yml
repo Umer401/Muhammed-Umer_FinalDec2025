@@ -25,7 +25,7 @@ jobs:
 
     # SAST Scan using Snyk
     - name: Snyk Security Scan
-      uses: snyk/actions/node@master
+      uses: snyk/actions/node@v4
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
