@@ -30,7 +30,7 @@ jobs:
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
-        args: test
+        args: test --all-projects --exclude-lockfiles
 
     - name: Login to DockerHub
       uses: docker/login-action@v3
