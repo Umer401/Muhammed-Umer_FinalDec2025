@@ -25,12 +25,14 @@ jobs:
       run: npm test
 
     # SAST Scan using Snyk
+# SAST Scan using Snyk
     - name: Snyk Security Scan
-      uses: snyk/actions/node@v4
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      with:
-        args: test
+  uses: snyk/actions/node@v4
+  env:
+    SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+  with:
+    args: test
+
 
     # Build Docker Image
     - name: Login to DockerHub
