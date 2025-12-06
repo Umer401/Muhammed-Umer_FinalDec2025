@@ -18,7 +18,7 @@ jobs:
         node-version: 18
 
     - name: Install dependencies
-      run: npm install
+      run: nvm install
 
     - name: Run test
-      run: npm test
+      run: nvm test
